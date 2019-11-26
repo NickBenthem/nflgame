@@ -457,10 +457,10 @@ def run():
             gid, purl = t
             resp = requests.get(purl)
             if resp.status_code != 200:
-                if resp.status_code != 404:
+                if resp.status_code == 404:
                     return gid,purl, False
                 else:
-                    return gid, purl, nDone
+                    return gid, purl, Done
             return gid, purl, resp.text
 
 
