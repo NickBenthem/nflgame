@@ -11,14 +11,16 @@ It can work with real-time data, which can be used for fantasy football.
 
 ### Installation
 
-[python3 implementation is on our radar](https://github.com/derek-adair/nflgame/tree/py3), this project is dropping python 2 support **effective immediately**.
+python3 implementation is in beta --- `pip install nflgame-redux==2.0.1b1`.
+
+**this project is no longer python2 compatible.**.  The old python2 (<1.2.20) branch *should* work but... come on now... just [upgrade](https://docs.python.org/2/library/2to3.html).
 
 1. Install [virtualenv](https://virtualenv.pypa.io/en/stable/installation/) and make sure it's [activated](https://virtualenv.pypa.io/en/stable/userguide/).
 
 2. In your **python 3** virtualenv...
 
 ```
-pip install nflgame-redux
+pip install nflgame-redux==2.0.1b1
 ```
 
 3. Update players
@@ -147,3 +149,9 @@ from an entire season:
 ```python
 nflgame.combine(nflgame.games(2010)).csv('season2010.csv')
 ```
+
+### Contributing (WIP)
+* All active development takes place on the "dev" branch.  This is where pull requests should be submitted against.
+* Bug fixes for released versions should be submitted against "master" branch and will get merged accordingly.
+* This project will stick to [Semantic Versioning](https://semver.org/)
+* Tests are *greatly* encouraged bu tnot required.
